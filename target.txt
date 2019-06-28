@@ -1,0 +1,16 @@
+1. routing
+2. nested routing
+3. static files
+4. http codes for routing
+5. database
+6. login/signup/crypto
+7. some queries
+8. web sockets
+9. streaming
+10. use more traits and enums
+11. middleware
+12. private routes
+
+// helpful URLs
+1. https://github.com/actix/actix-web/issues/884
+2. https://siciarz.net/24-days-rust-lettre/ && https://stackoverflow.com/questions/50428447/send-to-smtp-gmail-com465-ssl-with-lettre-crate
