@@ -19,7 +19,7 @@ mod commontypes;
 
 
 fn connect_pg() -> PooledConnection<PostgresConnectionManager> {
-    let manager = PostgresConnectionManager::new("postgres://postgres:postgres@localhost:5432/actix-web",
+    let manager = PostgresConnectionManager::new("postgres://postgres:postgres@localhost:5432/insights",
                                                  TlsMode::None).unwrap();
     let pool = r2d2::Pool::new(manager).unwrap();
     let connection = pool.get().unwrap();
@@ -43,6 +43,6 @@ fn main() -> std::io::Result<()> {
             .service(auth_routes())
             .service(web::resource("/hello/{name}").route(web::get().to_async(index_async)))
         )
-        .bind("127.0.0.1:8080")?
+        .bind("localhost:8080")?
         .run()
 }
