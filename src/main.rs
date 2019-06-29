@@ -19,7 +19,7 @@ mod commontypes;
 
 
 fn connect_pg() -> PooledConnection<PostgresConnectionManager> {
-    let manager = PostgresConnectionManager::new("postgres://postgres:postgres@localhost:5432/insights",
+    let manager = PostgresConnectionManager::new("postgres://postgres:postgres@localhost:5432/actix-web",
                                                  TlsMode::None).unwrap();
     let pool = r2d2::Pool::new(manager).unwrap();
     let connection = pool.get().unwrap();
