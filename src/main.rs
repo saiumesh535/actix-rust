@@ -3,8 +3,7 @@ extern crate failure;
 use actix_web::{Error};
 use actix_web::{web, App, HttpServer, HttpRequest, HttpResponse};
 use futures::{future::ok, Future};
-
-use postgres::{ Connection, TlsMode };
+use r2d2_postgres::{TlsMode as r2d2_tls, PostgresConnectionManager};
 use std::sync::Mutex;
 
 
@@ -12,13 +11,18 @@ mod communication;
 
 mod auth;
 use auth::auth_routes;
+use r2d2::PooledConnection;
 
 mod commontypes;
 
 
 
-fn connect_pg() -> Connection {
-    Connection::connect("postgres://postgres:postgres@localhost:5432/insights", TlsMode::None).unwrap()
+fn connect_pg() -> PooledConnection<PostgresConnectionManager> {
+    let manager = PostgresConnectionManager::new("postgres://postgres:postgres@localhost:5432/insights",
+                                                 r2d2_tls::None).unwrap();
+    let pool = r2d2::Pool::new(manager).unwrap();
+    let connection = pool.get().unwrap();
+    return connection;
 }
 
 fn index_async(req: HttpRequest) -> impl Future<Item = HttpResponse, Error = Error> {
