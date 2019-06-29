@@ -43,6 +43,6 @@ fn main() -> std::io::Result<()> {
             .service(auth_routes())
             .service(web::resource("/hello/{name}").route(web::get().to_async(index_async)))
         )
-        .bind("localhost:8080")?
+        .bind("0.0.0.0:3000")?
         .run()
 }
