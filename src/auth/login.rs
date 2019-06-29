@@ -1,11 +1,13 @@
 use actix_web::{web, HttpResponse};
-use postgres::Connection;
+
 use std::sync::Mutex;
 use chrono::{Local, Duration};
 use std::convert::AsRef;
 use jsonwebtoken::{ encode, Header };
 use serde_derive::{Deserialize, Serialize};
 use crate::commontypes::{ ErrorMessage };
+use r2d2::PooledConnection;
+use r2d2_postgres::PostgresConnectionManager;
 
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -20,7 +22,7 @@ struct LoginTokenClaims {
     exp: i64
 }
 
-pub fn login(login: web::Json<Login>, state: web::Data<Mutex<Connection>>) -> HttpResponse {
+pub fn login(login: web::Json<Login>, state: web::Data<Mutex<PooledConnection<PostgresConnectionManager>>>) -> HttpResponse {
     match state.lock() {
         Ok(pg_instance) => {
             match pg_instance.query("select * from rust_users where username = $1", &[&login.username]) {
