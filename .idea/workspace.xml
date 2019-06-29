@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5dbf03-4689-4570-9b9f-75ed758fd56a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/forgot_password.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/login.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/signup.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commontypes.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/communication/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/communication/send_email.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="168">
+              <caret line="20" column="103" lean-forward="true" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -43,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth/forgot_password.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="168">
+              <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -52,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth/signup.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="105">
+              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -88,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/communication/send_email.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+            <state relative-caret-position="210">
+              <caret line="10" column="135" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
             </state>
           </provider>
         </entry>
@@ -142,13 +136,13 @@
         <option value="$PROJECT_DIR$/src/communication/mod.rs" />
         <option value="$PROJECT_DIR$/target.txt" />
         <option value="$PROJECT_DIR$/src/auth/mod.rs" />
-        <option value="$PROJECT_DIR$/src/auth/login.rs" />
-        <option value="$PROJECT_DIR$/src/main.rs" />
-        <option value="$PROJECT_DIR$/src/auth/signup.rs" />
-        <option value="$PROJECT_DIR$/src/auth/forgot_password.rs" />
         <option value="$PROJECT_DIR$/src/commontypes.rs" />
         <option value="$PROJECT_DIR$/src/communication/send_email.rs" />
         <option value="$PROJECT_DIR$/Cargo.toml" />
+        <option value="$PROJECT_DIR$/src/auth/login.rs" />
+        <option value="$PROJECT_DIR$/src/auth/forgot_password.rs" />
+        <option value="$PROJECT_DIR$/src/auth/signup.rs" />
+        <option value="$PROJECT_DIR$/src/main.rs" />
       </list>
     </option>
   </component>
@@ -166,10 +160,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1104" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -179,29 +173,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="actix-01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actix-01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actix-01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actix-01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actix-01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actix-01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="communication" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,7 +209,7 @@
     <frame x="-8" y="-1088" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17987151" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17331164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -419,31 +392,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth/forgot_password.rs">
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="168">
+          <caret line="20" column="103" lean-forward="true" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/commontypes.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/communication/send_email.rs">
+    <entry file="file://$PROJECT_DIR$/src/auth/signup.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+        <state relative-caret-position="105">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cargo.toml">
+    <entry file="file://$PROJECT_DIR$/src/auth/forgot_password.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="210">
+          <caret line="10" column="135" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
         </state>
       </provider>
     </entry>
