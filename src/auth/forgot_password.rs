@@ -1,12 +1,14 @@
 use actix_web::{web, HttpResponse};
-use postgres::Connection;
+
 use std::sync::Mutex;
 use std::thread;
 
 use crate::communication::send_email::send_email;
 use crate::commontypes::ForgotPassword;
+use r2d2::PooledConnection;
+use r2d2_postgres::PostgresConnectionManager;
 
-pub fn forgot_password(forgot_password: web::Json<ForgotPassword>, state: web::Data<Mutex<Connection>>) -> HttpResponse {
+pub fn forgot_password(forgot_password: web::Json<ForgotPassword>, state: web::Data<Mutex<PooledConnection<PostgresConnectionManager>>>) -> HttpResponse {
     match state.lock() {
         Ok(pg_instance) => {
             let user = pg_instance.query("SELECT * FROM rust_users where username = $1",
