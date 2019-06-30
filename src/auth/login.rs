@@ -22,6 +22,11 @@ struct LoginTokenClaims {
     exp: i64
 }
 
+#[derive(Serialize)]
+struct Token {
+    token: String
+}
+
 pub fn login(login: web::Json<Login>, state: web::Data<Mutex<PooledConnection<PostgresConnectionManager>>>) -> HttpResponse {
     match state.lock() {
         Ok(pg_instance) => {
@@ -38,7 +43,9 @@ pub fn login(login: web::Json<Login>, state: web::Data<Mutex<PooledConnection<Po
                     };
                     match encode(&Header::default(), &my_claims, "thisissecret".as_ref()) {
                         Ok(token) => {
-                            return  HttpResponse::Ok().body(token)
+                            return  HttpResponse::Ok().json(Token {
+                                    token: token
+                                })
                         }, Err(jwt_error) => {
                             println!("error has occurred {}", jwt_error);
                             return HttpResponse::InternalServerError().body("")
